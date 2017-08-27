@@ -1,0 +1,34 @@
+.div-album{
+  width: 300px;
+  background-color: #f8bbd0;
+  padding:5px;
+  margin:5px;
+  border: solid 1px green;
+  border-radius: 2%;
+}
+img{
+  text-align: center;
+  display: block;
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border:solid 1px green;
+}
+button{
+  padding: 3px;
+  margin-top: 3px;
+  opacity: 0.6;
+  background-color: #ffeeff;
+  filter: alpha(opacity=60);
+  border-radius: 2%;
+  width: 150px;
+  border:solid 1px green;
+  font-weight: bold;
+  color: black;
+}
+button p{
+  margin:5%;
+  font-weight: bold;
+  color:#000000;
+}
