@@ -4,6 +4,8 @@ function getname(name){
 var Chao = React.createClass({
   hienthongbao:function(){
       alert(this.props.ten);
+
+      
   },
   themHocVien(){
     this.state.tongHocVien = parseInt(this.state.tongHocVien) +1;
