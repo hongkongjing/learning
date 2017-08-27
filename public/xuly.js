@@ -30,33 +30,8 @@ var Chao = React.createClass({
     );
   }
 });
-var InputTag = React.createClass(
-  {
-    show(){
-      var text = this.refs.txt.value;
-      var sl = this.refs.sl.value;
-      alert(text);
-      alert(sl);
-    },
-    render(){
-      return (
-        <div>
-              <select ref="sl">
-              <option value="a">aaaa</option>
-              <option value="b">bbbb</option>
-              <option value="c">cccc</option>
-              </select>
-
-              <input type="text" ref='txt'/>
-              <button onClick={this.show}>hien thi</button>
-        </div>
-      )
-    }
-
-});
 ReactDOM.render(
   <div>
-  <InputTag />
   <Chao ten="BMW" tongHocVien="10"/>
   <Chao ten="toyota" tongHocVien="20">maria</Chao>
   <p>-----------------------------------------------------------</p>
