@@ -1,44 +1,39 @@
-var Clickinc = React.createClass({
-  tangso(){
-    this.state.soHientai = parseInt(this.state.soHientai) +1 ;
-    this.setState(this.state);
-  },
-  getInitialState(){
-    return{soHientai: this.props.soHientai};
-  },
-  render:function(){
-      return(
-        <div>
-          <button onClick={this.tangso}>Hello {this.state.soHientai}</button>
-        </div>
-      )
+var Note = React.createClass
+(
+  {
+  render()
+    {
+      return (
+        <p>hello my friend</p>
+              );
     }
-});
-
-var Album = React.createClass({
-  changeImg(){
-    this.setState({hinh: (parseInt(this.state.hinh)%4) +1});
-  },
-  getInitialState(){
-    return{hinh: 1};
-  },
-  render(){
-    return (
-
-      <div className="div-album">
-        <img src={"image/"+this.state.hinh +".jpg"} />
-      </div>
-    );
-  },
-    componentDidMount(){
-        setInterval(this.changeImg,1000);
-    }
-}
+  }
 );
-
+var List = React.createClass(
+  {
+    getInitialState(){
+      return({mang:["hello","hi","xixi"]});
+    },
+    add(){
+      this.state.mang.push("node js");
+      this.setState(this.state);
+    },
+  render(){
+    return(
+      <div>
+      <button onClick={this.add}>Them</button>
+      {
+        this.state.mang.map(function(note,index)
+        {
+          return <h1 key={index}>{note}</h1>
+        })
+      }
+      </div>
+    )
+  }
+});
 ReactDOM.render(
   <div>
-<Clickinc soHientai="10" />
-<Album />
+  <List/>
   </div>
   , document.getElementById('root'));

@@ -21,11 +21,12 @@ button{
   opacity: 0.6;
   background-color: #ffeeff;
   filter: alpha(opacity=60);
-  border-radius: 2%;
+  border-radius: 6%;
   width: 150px;
   border:solid 1px green;
   font-weight: bold;
   color: black;
+
 }
 button p{
   margin:5%;
