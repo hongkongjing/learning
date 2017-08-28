@@ -16,39 +16,23 @@ var Clickinc = React.createClass({
 });
 
 var Album = React.createClass({
+  changeImg(){
+    this.setState({hinh: (parseInt(this.state.hinh)%4) +1});
+  },
   getInitialState(){
     return{hinh: 1};
   },
-  TangLenMot(){
-    this.setState(()=>{if (this.state.hinh>3) {
-      this.state.hinh =1;
-      this.setState(this.state);
-
-    } else {
-      this.state.hinh = parseInt(this.state.hinh) +1;
-      this.setState(this.state);
-    }});
-  },
-  GiamXuongMot(){
-    this.setState(()=>{if (this.state.hinh<2) {
-      this.state.hinh = 4;
-      this.setState(this.state);
-
-    } else {
-      this.state.hinh = parseInt(this.state.hinh) - 1;
-      this.setState(this.state);
-    }});
-},
   render(){
     return (
 
       <div className="div-album">
         <img src={"image/"+this.state.hinh +".jpg"} />
-        <button onClick={this.GiamXuongMot}>Quay lai</button>
-        <button onClick={this.TangLenMot}>Tiep theo</button>
       </div>
     );
-  }
+  },
+    componentDidMount(){
+        setInterval(this.changeImg,1000);
+    }
 }
 );
 
