@@ -1,3 +1,9 @@
+const friends = [
+    {id:1, name: 'Dave',age:50},
+    {id:2,name: 'Kellie',age:42},
+    {id:3,name: 'Max',age:12},
+    {id:2,name: 'Jack',age:12}
+];
 var Note = React.createClass
 (
   {
@@ -12,7 +18,7 @@ var Note = React.createClass
 var List = React.createClass(
   {
     getInitialState(){
-      return({mang:["hello","hi","xixi"]});
+      return({mang: friends});
     },
     add(){
       this.state.mang.push("node js");
@@ -23,10 +29,7 @@ var List = React.createClass(
       <div>
       <button onClick={this.add}>Them</button>
       {
-        this.state.mang.map(function(note,index)
-        {
-          return <h1 key={index}>{note}</h1>
-        })
+        this.state.mang.map((note,chiso)=><h1 key={chiso}>{note.id}-{note.name}</h1>)
       }
       </div>
     )
