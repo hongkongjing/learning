@@ -33,3 +33,23 @@ button p{
   font-weight: bold;
   color:#000000;
 }
+.div-note{
+  background-color: #brown;
+  width: 150px;
+  padding : 5px;
+  margin:3px;
+  border: solid 3px green;
+  border-radius: 5px;
+  font-weight: bold;
+  color:black;
+  filter: alpha(opacity=60);
+
+}
+.div-list{
+  width: 300px;
+  background-color: #f8bbd0;
+  padding:5px;
+  margin:5px;
+  border: solid 1px green;
+  border-radius: 2%;
+}
